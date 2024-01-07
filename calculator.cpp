@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    while (true)
+    while (true) // I put all the code in a while loop so when the code is done the cmd window wouldnt close and the program starts again.
     {
         string x[4] = {"+", "-", "*", "/"};
         string oprator = "";
@@ -14,7 +14,7 @@ int main()
         cout << str << "= ";
         for (int i = 0; i < 4; i++)
         {
-            if (str.find(x[i]) > 18446744073)
+            if (str.find(x[i]) > 18446744073) // when the find() function cant find "x[i]" it gives a big number that starts with "18446744073" so I just used it.
             {
                 continue;
             }
@@ -24,7 +24,7 @@ int main()
                 oprator = x[i];
                 if (oprator == "+")
                 {
-                    sum = stoi(str.substr(0, opratorPos)) + stoi(str.substr(opratorPos + 1, str.length()));
+                    sum = stoi(str.substr(0, opratorPos)) + stoi(str.substr(opratorPos + 1, str.length())); // substr() function extract an string from string and then I converted the string ti int by stoi() methode and used it in calculation as a number.
                 }
                 else if (oprator == "-")
                 {
